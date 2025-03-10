@@ -9,6 +9,6 @@ router.post("/login", loginUser);
 
 router.get("/profile", protect, (req, res) => {
     res.json({ message: `Welcome ${req.user.name}`, user: req.user });
-  });
+});
 
 module.exports = router;
