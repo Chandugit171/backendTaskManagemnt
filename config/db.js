@@ -5,8 +5,12 @@ require("dotenv").config();
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI);
-
+    // const conn = await mongoose.connect(process.env.MONGO_URI);
+    const conn = await mongoose.connect(process.env.MONGO_URI, {
+      dbName: "admin" // 👈 Ensure the correct database is used
+    });
+    console.log("conn",conn);
+    
   } catch (error) {
     console.error(`Error: ${error.message}`);
     process.exit(1);
