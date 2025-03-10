@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const dbName = "admin"; 
+const dbName = "admin"; // ✅ Define your database name here
 
 const connectDB = async () => {
   try {
