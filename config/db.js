@@ -7,7 +7,7 @@ const connectDB = async () => {
   try {
     // const conn = await mongoose.connect(process.env.MONGO_URI);
     const conn = await mongoose.connect(process.env.MONGO_URI, {
-      dbName: "admin" // 👈 Ensure the correct database is used
+      dbName: "db" // 👈 Ensure the correct database is used
     });
     console.log("conn",conn);
     
