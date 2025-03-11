@@ -1,13 +1,11 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-// const dbName = "admin"; // ✅ Define your database name here
 
 const connectDB = async () => {
   try {
-    // const conn = await mongoose.connect(process.env.MONGO_URI);
     const conn = await mongoose.connect(process.env.MONGO_URI, {
-      dbName: "hrms" // 👈 Ensure the correct database is used
+      dbName: "hrms" 
     });
     console.log("conn",conn);
     
