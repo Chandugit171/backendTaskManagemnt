@@ -3,10 +3,10 @@ const { createTask, getAllTasks, getTaskById, updateTask, deleteTask } = require
 const protect = require('../middleware/authMiddleware');
 const router = express.Router();
 
-router.post('/add_task', createTask);
-router.get('/get_all_tasks', getAllTasks);
-router.get('/:id', getTaskById);
-router.put('/:id', updateTask);
-router.delete('/:id', deleteTask);
+router.post('/add_task', protect, createTask);
+router.get('/get_all_tasks', protect, getAllTasks);
+router.get('/:id', protect, getTaskById);
+router.put('/:id', protect, updateTask);
+router.delete('/:id', protect, deleteTask);
 
 module.exports = router;
