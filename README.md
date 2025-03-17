@@ -39,3 +39,7 @@ JWT_SECRET=`7b7c65f66381bead955aff82902afce4c865cb661181960b82425dec31936922`
 
 Start the server
 `yarn dev`
+
+
+### postman collection 
+`https://drive.google.com/file/d/1w3DOJs3WKHQNUb7VpDmb9hb6cX7hX0BD/view?usp=sharing`
